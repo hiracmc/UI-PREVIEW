@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "unifont";
+  src: url("./assets/unifont.otf");
+}
+
 #editor {
   height: 100%;
   width: 30%;
@@ -7,4 +12,8 @@
 #logo {
   font-size: 30px;
   color:red;
+}
+
+#preview {
+  font-family: "unifont", sans-serif;
 }
