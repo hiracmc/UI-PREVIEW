@@ -32,7 +32,7 @@
     const main = codeObj.jupre
     let html = "";
     for (const obj of main){
-      html += newObj(obj)
+      html += newObj(codeObj['chest_label'])
     }
     render.innerHTML = html;
     
@@ -43,7 +43,7 @@
       return value
     }
 
-    function newObj(ob) {
+    function newObj(obj) {
       switch (obj.type) {
         case "label":
         return `<p>${covValue(obj.text)}</p>`
