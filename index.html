@@ -31,8 +31,9 @@
     const codeObj = JSON.parse(code)
     const main = codeObj.jupre
     let html = "";
-    for (const obj of main){
-      html += newObj(codeObj['chest_label'])
+    for (let i = 0;i<main.length;i++){
+      const obj = main[i];
+      html += newObj(codeObj[obj])
     }
     render.innerHTML = html;
     
@@ -46,7 +47,7 @@
     function newObj(obj) {
       switch (obj.type) {
         case "label":
-        return `<p>${covValue(obj.text)}</p>`
+        return `<p id=${obj}>${covValue(obj.text)}</p>`
       }
     }
   </script>
